@@ -1,17 +1,14 @@
 provider "aws"{
   region = "us-east-2"
 }
-resource "aws_eks_cluster" "practice-cluster" 
-{
+resource "aws_eks_cluster" "practice-cluster" {
     name = "${var.project}-cluster"
     role_arn = var.role_arn 
-    vpc_config 
-    {
+    vpc_config {
     endpoint_private_access = true
     endpoint_public_access  = false
     }
-    access_config 
-    {
+    access_config {
         authentication_mode = "API_AND_CONFIG_MAP"  
         bootstrap_cluster_creator_permission = true  
     }
