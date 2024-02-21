@@ -1,3 +1,7 @@
+provider "aws"
+{
+  region = "us-east-2"
+}
 resource "aws_eks_cluster" "practice-cluster" 
 {
     name = "${var.project}-cluster"
