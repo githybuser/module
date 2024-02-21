@@ -6,7 +6,7 @@ resource "aws_eks_cluster" "practice-cluster" {
     role_arn = var.role_arn 
     access_config {
         authentication_mode = "API_AND_CONFIG_MAP"  
-        bootstrap_cluster_creator_admin_permission = true  
+        bootstrap_cluster_creator_admin_permissions = true  
     }
     vpc_config {
         security_group_ids = var.security_group_ids
