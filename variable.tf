@@ -11,6 +11,6 @@ variable "subnet_ids" {
 }
 
 variable "security_group_ids" {
-    default = "sg-0258ebfab51312590"
+    default = "sg-0bbab5807f28074db"
 }
 
