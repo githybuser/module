@@ -10,7 +10,7 @@ terraform {
     }
 }
 
-resourse "aws_instance" "my_instance" {
+resource "aws_instance" "my_instance" {
     ami = "ami-02ca28e7c7b8f8be1"
     instance_type = "t2.micro"
     key_name = "my-ohio-key"
@@ -33,4 +33,4 @@ resource "aws_security_group_rule" "all-tcp" {
 }
 
 output "my_instance_private_ip"
-    value = "aws_instance.my_instance_private_ip"
+    value = aws_instance.my_instance_private_ip
